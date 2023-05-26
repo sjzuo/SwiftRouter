@@ -8,10 +8,10 @@ Pod::Spec.new do |s|
 							工具.
                        DESC
 
-  s.homepage         = 'https://github.com/sjzLovecj'
+  s.homepage         = 'https://github.com/sjzLovecj/'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'sjzLovecj' => '903289738@qq.com' }
-  s.source           = { :git => 'https://github.com/sjzLovecj/SwiftRouter.git/', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/sjzLovecj/SwiftRouter.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = "13.0"
   s.swift_versions     = ['5.0','5.1','5.2']

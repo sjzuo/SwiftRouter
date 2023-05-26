@@ -28,5 +28,8 @@ let package = Package(
         .testTarget(
             name: "SwiftRouterTests",
             dependencies: ["SwiftRouter"]),
+    ],
+    swiftLanguageVersions: [
+        .v5
     ]
 )

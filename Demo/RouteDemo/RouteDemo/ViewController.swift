@@ -58,7 +58,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
+        if indexPath.row == 0 { 
 //            Router.shared.createController("SecondViewController", moduleName: "RouteDemo", params: ["bgColor" : UIColor.red])
 //            Router.shared.createObject("SecondViewController", moduleName: "RouteDemo", params: ["bgColor" : UIColor.red])
             

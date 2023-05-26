@@ -22,6 +22,10 @@ Swift 路由和模块通信解耦工具
 
 ### Swift Package Manager
 
+在 Xcode 的菜单栏中选择 `File > Swift Packages > Add Pacakage Dependency`，然后在搜索栏输入
+
+`https://github.com/jackiehu/SwiftMediator`，即可完成集成
+
 
 ## 使用
 
@@ -61,38 +65,38 @@ public protocol RouterProtocol: AnyObject {
 ### 初始化
 初始化对象
 ```swift
-    Router.shared.createObject("SecondViewController", moduleName: "RouteDemo", params: ["bgColor" : UIColor.red])
+Router.shared.createObject("SecondViewController", moduleName: "RouteDemo", params: ["bgColor" : UIColor.red])
 ```
 
 初始化控制器
-```swoft
+```swift
     // 判断对象是否为控制器，是的话就返回
-    Router.shared.createController("SecondViewController", moduleName: "RouteDemo", params: ["bgColor" : UIColor.red])
+Router.shared.createController("SecondViewController", moduleName: "RouteDemo", params: ["bgColor" : UIColor.red])
 ```
 
 ### 原生跳转
 ```swift
-    Router.shared.push("SecondViewController", moduleName: "RouteDemo", from: self, params: ["bgColor" : UIColor.red], animation: true)
+Router.shared.push("SecondViewController", moduleName: "RouteDemo", from: self, params: ["bgColor" : UIColor.red], animation: true)
 ```
 
 ### 调用方法
 调用对象方法
-```swfit
-    if let viewController = Router.shared.createObject("SecondViewController") {
+```swift
+if let viewController = Router.shared.createObject("SecondViewController") {
+
+    // 已经知道对象，可以不用Router，直接调用objectAction方法
+    // 例如：viewController.objectAction(type: nil, params: nil)
     
-        // 已经知道对象，可以不用Router，直接调用objectAction方法
-        // 例如：viewController.objectAction(type: nil, params: nil)
-        
-        // 使用Router调用对象方法
-        if let titleStr = Router.shared.objectAction(object: viewController) as? String {
-            debugPrint(titleStr)
-        }
+    // 使用Router调用对象方法
+    if let titleStr = Router.shared.objectAction(object: viewController) as? String {
+        debugPrint(titleStr)
     }
+}
 ```
 
 调用静态方法
 ```swift
-    Router.shared.staticAction("SecondViewController", moduleName: nil, type: nil, params: nil)
+Router.shared.staticAction("SecondViewController", moduleName: nil, type: nil, params: nil)
 ```
 
 

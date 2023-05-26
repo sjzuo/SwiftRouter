@@ -17,7 +17,7 @@ extension Router {
     /// - Returns: 对象方法返回值
     @discardableResult
     public func objectAction(object: RouterProtocol,
-                      _ type: Any? = nil,
+                      type: Any? = nil,
                       params: [String : Any]? = nil) -> Any? {
         return object.objectAction(type: type, params: params)
     }
@@ -32,7 +32,7 @@ extension Router {
     @discardableResult
     public func staticAction(_ objectName: String,
                       moduleName: String? = nil,
-                      _ type: Any? = nil,
+                      type: Any? = nil,
                       params: [String : Any]? = nil) -> Any? {
         var nameSpace = Bundle.main.infoDictionary?["CFBundleExecutable"] as? String
         if let moduleName { nameSpace = moduleName }

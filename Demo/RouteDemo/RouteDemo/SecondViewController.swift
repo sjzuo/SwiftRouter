@@ -1,5 +1,5 @@
 //
-//  SJZViewController.swift
+//  SecondViewController.swift
 //  RouteDemo
 //
 //  Created by S JZ on 2023/5/25.
@@ -7,11 +7,13 @@
 
 import UIKit
 
-class SJZViewController: UIViewController {
+class SecondViewController: UIViewController {
 
+    var bgColor: UIColor = .clear
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = bgColor
         
         self.title = "第二个页面"
     }
@@ -25,15 +27,22 @@ class SJZViewController: UIViewController {
     }
 }
 
-extension SJZViewController: RouterProtocol {
+extension SecondViewController: RouterProtocol {
+    // 初始化方法
     static func createInstance(params: [String : Any]?) -> RouterProtocol {
-        return SJZViewController()
+        let second = SecondViewController()
+        if let params {
+            second.bgColor = (params["bgColor"] as? UIColor) ?? .white
+        }
+        return second
     }
 
+    // 静态方法、类方法
     static func staticAction(type: Any?, params: [String : Any]?) -> Any? {
         return staticFunc()
     }
 
+    // 对象方法
     func objectAction(type: Any?, params: [String : Any]?) -> Any? {
         return getTitleStr()
     }

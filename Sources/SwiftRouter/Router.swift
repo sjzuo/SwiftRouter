@@ -12,14 +12,13 @@ public class Router: NSObject {
     public static var shared: Router = Router()
     private override init() {}
     
-    
-    @discardableResult
     /// 初始化控制器
     /// - Parameters:
     ///   - controllerName: 控制器名称
     ///   - moduleName: 控制器所在Bundle名称，为nil时，直接使用Bundle.main的CFBundleExecutable
     ///   - params: 初始化控制器所需参数
     /// - Returns: 控制器对象
+    @discardableResult
     public func createController(_ controllerName: String,
                                  moduleName: String? = nil,
                                  params: [String : Any]? = nil) -> UIViewController? {
@@ -27,13 +26,14 @@ public class Router: NSObject {
         return controller
     }
     
-    @discardableResult
+    
     /// 初始化对象
     /// - Parameters:
     ///   - objectName: 对象类名称
     ///   - moduleName: 对象所在Bundle名称，为nil时，直接使用Bundle.main的CFBundleExecutable
     ///   - params: 初始化对象所需参数
     /// - Returns: 初始化后的对象
+    @discardableResult
     public func createObject(_ objectName: String,
                              moduleName: String? = nil,
                              params: [String : Any]? = nil) -> RouterProtocol? {

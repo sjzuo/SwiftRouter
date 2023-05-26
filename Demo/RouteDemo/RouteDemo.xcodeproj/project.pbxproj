@@ -15,7 +15,7 @@
 		57A7984A2A1F45E9001BB6BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A798482A1F45E9001BB6BE /* LaunchScreen.storyboard */; };
 		57A798562A1F4690001BB6BE /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A798552A1F4690001BB6BE /* RouterProtocol.swift */; };
 		57A7985A2A1F4A24001BB6BE /* RouterTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A798592A1F4A24001BB6BE /* RouterTools.swift */; };
-		57A7985C2A1F4BEF001BB6BE /* SJZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7985B2A1F4BEF001BB6BE /* SJZViewController.swift */; };
+		57A7985C2A1F4BEF001BB6BE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7985B2A1F4BEF001BB6BE /* SecondViewController.swift */; };
 		57A7985E2A1F5209001BB6BE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7985D2A1F5209001BB6BE /* Router.swift */; };
 		57A798602A1F5B8D001BB6BE /* NavigationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7985F2A1F5B8D001BB6BE /* NavigationExtension.swift */; };
 		57A798622A1F5EDA001BB6BE /* ActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A798612A1F5EDA001BB6BE /* ActionExtension.swift */; };
@@ -34,7 +34,7 @@
 		57A798552A1F4690001BB6BE /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		57A798572A1F4923001BB6BE /* RouteDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RouteDemo.entitlements; sourceTree = "<group>"; };
 		57A798592A1F4A24001BB6BE /* RouterTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTools.swift; sourceTree = "<group>"; };
-		57A7985B2A1F4BEF001BB6BE /* SJZViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJZViewController.swift; sourceTree = "<group>"; };
+		57A7985B2A1F4BEF001BB6BE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		57A7985D2A1F5209001BB6BE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		57A7985F2A1F5B8D001BB6BE /* NavigationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationExtension.swift; sourceTree = "<group>"; };
 		57A798612A1F5EDA001BB6BE /* ActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionExtension.swift; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 				57A7983F2A1F45E7001BB6BE /* SceneDelegate.swift */,
 				57A798412A1F45E7001BB6BE /* ViewController.swift */,
 				57A798632A20438B001BB6BE /* TableViewCell.swift */,
-				57A7985B2A1F4BEF001BB6BE /* SJZViewController.swift */,
+				57A7985B2A1F4BEF001BB6BE /* SecondViewController.swift */,
 				57A798432A1F45E7001BB6BE /* Main.storyboard */,
 				57A798462A1F45E9001BB6BE /* Assets.xcassets */,
 				57A798482A1F45E9001BB6BE /* LaunchScreen.storyboard */,
@@ -181,7 +181,7 @@
 				57A7985A2A1F4A24001BB6BE /* RouterTools.swift in Sources */,
 				57A798602A1F5B8D001BB6BE /* NavigationExtension.swift in Sources */,
 				57A798422A1F45E7001BB6BE /* ViewController.swift in Sources */,
-				57A7985C2A1F4BEF001BB6BE /* SJZViewController.swift in Sources */,
+				57A7985C2A1F4BEF001BB6BE /* SecondViewController.swift in Sources */,
 				57A7985E2A1F5209001BB6BE /* Router.swift in Sources */,
 				57A798642A20438B001BB6BE /* TableViewCell.swift in Sources */,
 				57A7983E2A1F45E7001BB6BE /* AppDelegate.swift in Sources */,

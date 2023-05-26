@@ -59,9 +59,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            Router.shared.push("SJZViewController")
+//            Router.shared.createController("SecondViewController", moduleName: "RouteDemo", params: ["bgColor" : UIColor.red])
+//            Router.shared.createObject("SecondViewController", moduleName: "RouteDemo", params: ["bgColor" : UIColor.red])
+            
+            Router.shared.push("SecondViewController", moduleName: "RouteDemo", from: self, params: ["bgColor" : UIColor.red], animation: true)
         }else if indexPath.row == 1 {
-            if let viewController = Router.shared.createObject("SJZViewController") {
+            if let viewController = Router.shared.createObject("SecondViewController") {
                 // 已经知道对象，可以不用Router，直接调用objectAction方法
                 // 例如：viewController.objectAction(type: nil, params: nil)
                 if let titleStr = Router.shared.objectAction(object: viewController) as? String {
@@ -69,7 +72,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 }
             }
         }else if indexPath.row == 2 {
-            if let titleStr = Router.shared.staticAction("SJZViewController") as? String {
+            
+            if let titleStr = Router.shared.staticAction("SecondViewController") as? String {
                 debugPrint(titleStr)
             }
         }

@@ -14,11 +14,11 @@ Swift 路由和模块通信解耦工具
 
 ### cocoapods
 
-1. 在Podfile中添加 `pod 'SwiftRouter'`
+1. 在Podfile中添加 `pod 'SJZSwiftRouter'`
 
 2. 执行 `pod install` 或 `pod update`
 
-3. 导入 `import SwiftRouter`
+3. 导入 `import SJZSwiftRouter`
 
 ### Swift Package Manager
 

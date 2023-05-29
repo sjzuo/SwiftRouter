@@ -20,6 +20,8 @@
 		57A798602A1F5B8D001BB6BE /* NavigationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7985F2A1F5B8D001BB6BE /* NavigationExtension.swift */; };
 		57A798622A1F5EDA001BB6BE /* ActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A798612A1F5EDA001BB6BE /* ActionExtension.swift */; };
 		57A798642A20438B001BB6BE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A798632A20438B001BB6BE /* TableViewCell.swift */; };
+		57A798862A24642D001BB6BE /* PresentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A798852A24642C001BB6BE /* PresentExtension.swift */; };
+		57A798882A24681E001BB6BE /* PresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A798872A24681E001BB6BE /* PresentController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		57A7985F2A1F5B8D001BB6BE /* NavigationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationExtension.swift; sourceTree = "<group>"; };
 		57A798612A1F5EDA001BB6BE /* ActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionExtension.swift; sourceTree = "<group>"; };
 		57A798632A20438B001BB6BE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		57A798852A24642C001BB6BE /* PresentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentExtension.swift; sourceTree = "<group>"; };
+		57A798872A24681E001BB6BE /* PresentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 				57A798412A1F45E7001BB6BE /* ViewController.swift */,
 				57A798632A20438B001BB6BE /* TableViewCell.swift */,
 				57A7985B2A1F4BEF001BB6BE /* SecondViewController.swift */,
+				57A798872A24681E001BB6BE /* PresentController.swift */,
 				57A798432A1F45E7001BB6BE /* Main.storyboard */,
 				57A798462A1F45E9001BB6BE /* Assets.xcassets */,
 				57A798482A1F45E9001BB6BE /* LaunchScreen.storyboard */,
@@ -103,6 +108,7 @@
 				57A7985D2A1F5209001BB6BE /* Router.swift */,
 				57A7985F2A1F5B8D001BB6BE /* NavigationExtension.swift */,
 				57A798612A1F5EDA001BB6BE /* ActionExtension.swift */,
+				57A798852A24642C001BB6BE /* PresentExtension.swift */,
 			);
 			path = SwiftRouter;
 			sourceTree = "<group>";
@@ -185,6 +191,8 @@
 				57A7985E2A1F5209001BB6BE /* Router.swift in Sources */,
 				57A798642A20438B001BB6BE /* TableViewCell.swift in Sources */,
 				57A7983E2A1F45E7001BB6BE /* AppDelegate.swift in Sources */,
+				57A798882A24681E001BB6BE /* PresentController.swift in Sources */,
+				57A798862A24642D001BB6BE /* PresentExtension.swift in Sources */,
 				57A798562A1F4690001BB6BE /* RouterProtocol.swift in Sources */,
 				57A798622A1F5EDA001BB6BE /* ActionExtension.swift in Sources */,
 				57A798402A1F45E7001BB6BE /* SceneDelegate.swift in Sources */,

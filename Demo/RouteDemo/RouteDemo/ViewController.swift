@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var dataSource = ["跳转第二个页面", "调用第二个页面对象方法", "调用第二个页面类方法"]
+    var dataSource = ["跳转第二个页面", "调用第二个页面对象方法", "调用第二个页面类方法", "模态跳转方法"]
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
@@ -58,7 +58,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 { 
+        if indexPath.row == 0 {
 //            Router.shared.createController("SecondViewController", moduleName: "RouteDemo", params: ["bgColor" : UIColor.red])
 //            Router.shared.createObject("SecondViewController", moduleName: "RouteDemo", params: ["bgColor" : UIColor.red])
             
@@ -75,6 +75,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             
             if let titleStr = Router.shared.staticAction("SecondViewController") as? String {
                 debugPrint(titleStr)
+            }
+        }else if indexPath.row == 3 {
+            Router.shared.present("PresentController", moduleName: "RouteDemo", from: self, params: nil, isNavigation: true, animation: true) {
+                debugPrint("模态试图")
             }
         }
     }

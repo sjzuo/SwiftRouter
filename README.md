@@ -79,6 +79,11 @@ Router.shared.createController("SecondViewController", moduleName: "RouteDemo", 
 Router.shared.push("SecondViewController", moduleName: "RouteDemo", from: self, params: ["bgColor" : UIColor.red], animation: true)
 ```
 
+### 模态跳转
+```swift
+Router.shared.present("PresentController", moduleName: "RouteDemo", from: self, params: nil, isNavigation: true, animation: true) {}
+```
+
 ### 调用方法
 调用对象方法
 ```swift

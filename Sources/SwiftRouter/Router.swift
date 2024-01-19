@@ -8,18 +8,15 @@
 import UIKit
 
 public class Router: NSObject {
-    // 单例对象
-    public static var shared: Router = Router()
-    private override init() {}
-    
+
     /// 初始化控制器
     /// - Parameters:
-    ///   - controllerName: 控制器名称
-    ///   - moduleName: 控制器所在Bundle名称，为nil时，直接使用Bundle.main的CFBundleExecutable
+    ///   - controllerName: 控制器名称（如果controllerName为"moduleName.className"格式，直接使用className生成对象类，moduleName可不传）
+    ///   - moduleName: 控制器所在Bundle名称，为nil时，直接使用Bundle.main的CFBundleExecutable（（如果className不为"moduleName.className"格式））
     ///   - params: 初始化控制器所需参数
     /// - Returns: 控制器对象
     @discardableResult
-    public func createController(_ controllerName: String,
+    public static func createController(_ controllerName: String,
                                  moduleName: String? = nil,
                                  params: [String : Any]? = nil) -> UIViewController? {
         guard let controller = createObject(controllerName, moduleName: moduleName, params: params) as? UIViewController else { return nil }
@@ -29,24 +26,47 @@ public class Router: NSObject {
     
     /// 初始化对象
     /// - Parameters:
-    ///   - objectName: 对象类名称
-    ///   - moduleName: 对象所在Bundle名称，为nil时，直接使用Bundle.main的CFBundleExecutable
+    ///   - className: 对象类名称（如果className为"moduleName.className"格式，直接使用className生成对象类，moduleName可不传）
+    ///   - moduleName: 对象所在Bundle名称，为nil时，直接使用Bundle.main的CFBundleExecutable（如果className不为"moduleName.className"格式）
     ///   - params: 初始化对象所需参数
     /// - Returns: 初始化后的对象
     @discardableResult
-    public func createObject(_ objectName: String,
+    public static func createObject(_ className: String,
                              moduleName: String? = nil,
                              params: [String : Any]? = nil) -> RouterProtocol? {
-        var nameSpace = Bundle.main.infoDictionary?["CFBundleExecutable"] as? String
-        if let moduleName { nameSpace = moduleName }
-        guard let nameSpace, !nameSpace.isEmpty else { return nil }
+        let newClassName = configClassName(className, moduleName: moduleName)
+        guard newClassName.isEmpty else { return nil }
         
-        let className = "\(nameSpace).\(objectName)"
-        let cls: AnyClass? = NSClassFromString(className)
+        let cls: AnyClass? = NSClassFromString(newClassName)
         guard let objectCls = cls as? RouterProtocol.Type else { return nil }
-       
+        
         let object = objectCls.createInstance(params: params)
         return object
+    }
+    
+    
+    /// 保证返回的字符串为
+    /// - Parameters:
+    ///   - className: 对象类名称（如果className为"moduleName.className"格式，直接使用className生成对象类，moduleName可不传）
+    ///   - moduleName: 对象所在Bundle名称，为nil时，直接使用Bundle.main的CFBundleExecutable（如果className不为"moduleName.className"格式）
+    /// - Returns: 返回的字符串为"moduleName.className"（如果不为该格式，则返回""）
+    static func configClassName(_ className: String,
+                                moduleName: String? = nil) -> String {
+        var newClassName = ""
+        if className.contains(".") {
+            newClassName = className
+        }else {
+            var nameSpace = ""
+            if let moduleName {
+                nameSpace = moduleName
+            }else if let bundleName = Bundle.main.infoDictionary?["CFBundleExecutable"] as? String {
+                nameSpace = bundleName
+            }
+            newClassName = "\(nameSpace).\(className)"
+        }
+        
+        guard newClassName.contains(".") else { return "" }
+        return newClassName
     }
     
 }

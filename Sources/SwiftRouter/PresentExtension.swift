@@ -18,13 +18,13 @@ extension Router {
     ///   - isNavigation: 是否需要添加导航栏
     ///   - animation: 模态是否需要动画
     ///   - completion: 模态完成后，是否需要
-    public func present(_ controllerName: String,
+    public static func present(_ controllerName: String,
                         moduleName: String? = nil,
                         from fromController: UIViewController? = nil,
                         params: [String : Any]? = nil,
                         isNavigation: Bool = false,
                         animation: Bool = true,
-                        completion: (() -> Void)?) {
+                        completion: (() -> Void)? = nil) {
         guard let controller = createController(controllerName, moduleName: moduleName, params: params) else { return }
         
         // 是否添加导航栏

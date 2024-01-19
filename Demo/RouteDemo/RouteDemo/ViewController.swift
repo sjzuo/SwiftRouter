@@ -59,25 +59,22 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-//            Router.shared.createController("SecondViewController", moduleName: "RouteDemo", params: ["bgColor" : UIColor.red])
-//            Router.shared.createObject("SecondViewController", moduleName: "RouteDemo", params: ["bgColor" : UIColor.red])
-            
-            Router.shared.push("SecondViewController", moduleName: "RouteDemo", from: self, params: ["bgColor" : UIColor.red], animation: true)
+            Router.push("SecondViewController", moduleName: "RouteDemo", from: self, params: ["bgColor" : UIColor.red], animation: true)
         }else if indexPath.row == 1 {
-            if let viewController = Router.shared.createObject("SecondViewController") {
+            if let viewController = Router.createObject("SecondViewController") {
                 // 已经知道对象，可以不用Router，直接调用objectAction方法
                 // 例如：viewController.objectAction(type: nil, params: nil)
-                if let titleStr = Router.shared.objectAction(object: viewController) as? String {
+                if let titleStr = Router.objectAction(object: viewController, type: "0") as? String {
                     debugPrint(titleStr)
                 }
             }
         }else if indexPath.row == 2 {
             
-            if let titleStr = Router.shared.staticAction("SecondViewController") as? String {
+            if let titleStr = Router.staticAction("SecondViewController") as? String {
                 debugPrint(titleStr)
             }
         }else if indexPath.row == 3 {
-            Router.shared.present("PresentController", moduleName: "RouteDemo", from: self, params: nil, isNavigation: true, animation: true) {
+            Router.present("PresentController", moduleName: "RouteDemo", from: self, params: nil, isNavigation: true, animation: true) {
                 debugPrint("模态试图")
             }
         }

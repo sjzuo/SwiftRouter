@@ -22,20 +22,18 @@ class PresentController: UIViewController {
 }
 
 extension PresentController: RouterProtocol {
+    static func staticAction<T>(type: T?, params: [String : Any]?) -> Any? where T : Equatable {
+        return nil
+    }
+    
+    func objectAction<T>(type: T?, params: [String : Any]?) -> Any? where T : Equatable {
+        return nil
+    }
+    
     // 初始化方法
     static func createInstance(params: [String : Any]?) -> RouterProtocol {
         let second = PresentController()
         return second
-    }
-
-    // 静态方法、类方法
-    static func staticAction(type: Any?, params: [String : Any]?) -> Any? {
-        return nil
-    }
-
-    // 对象方法
-    func objectAction(type: Any?, params: [String : Any]?) -> Any? {
-        return nil
     }
 }
 

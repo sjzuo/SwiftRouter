@@ -28,6 +28,7 @@ class SecondViewController: UIViewController {
 }
 
 extension SecondViewController: RouterProtocol {
+    
     // 初始化方法
     static func createInstance(params: [String : Any]?) -> RouterProtocol {
         let second = SecondViewController()
@@ -35,15 +36,5 @@ extension SecondViewController: RouterProtocol {
             second.bgColor = (params["bgColor"] as? UIColor) ?? .white
         }
         return second
-    }
-
-    // 静态方法、类方法
-    static func staticAction(type: Any?, params: [String : Any]?) -> Any? {
-        return staticFunc()
-    }
-
-    // 对象方法
-    func objectAction(type: Any?, params: [String : Any]?) -> Any? {
-        return getTitleStr()
     }
 }

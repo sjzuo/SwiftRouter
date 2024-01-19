@@ -8,7 +8,7 @@
 import UIKit
 
 // 想要解耦的对象，都需要实现该协议
-public protocol RouterProtocol: AnyObject {
+public protocol RouterProtocol where Self: NSObject {
     
     /// 创建对象，为使用Router做准备
     /// - Parameter params: 初始化时，需要用到的参数
@@ -22,7 +22,7 @@ public protocol RouterProtocol: AnyObject {
     ///   - params: static方法所需参数
     /// - Returns: 静态方法返回的参数
     @discardableResult
-    static func staticAction(type: Any?, params: [String : Any]?) -> Any?
+    static func staticAction<T>(type: T?, params: [String : Any]?) -> Any? where T: Equatable
     
     /// RouterProtocol调用对象方法
     /// - Parameters:
@@ -30,5 +30,18 @@ public protocol RouterProtocol: AnyObject {
     ///   - params: 对象方法所需参数
     /// - Returns: 对象方法返回的参数
     @discardableResult
-    func objectAction(type: Any?, params: [String : Any]?) -> Any?
+    func objectAction<T>(type: T?, params: [String : Any]?) -> Any? where T: Equatable
+}
+
+// 将不必须实现的方法，给一个默认值
+extension RouterProtocol {
+    @discardableResult
+    static func staticAction<T>(type: T?, params: [String : Any]?) -> Any? where T: Equatable {
+        return nil
+    }
+    
+    @discardableResult
+    func objectAction<T>(type: T?, params: [String : Any]?) -> Any? where T: Equatable {
+        return nil
+    }
 }

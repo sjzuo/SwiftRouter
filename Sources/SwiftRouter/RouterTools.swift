@@ -7,9 +7,9 @@
 
 import UIKit
 
-public struct RouterTools {
+struct RouterTools {
     // 获取KeyWindow
-    public static func getKeyWindow() -> UIWindow? {
+    static func getKeyWindow() -> UIWindow? {
         // iOS13.0 之前获取方式
         // UIApplication.shared.keyWindow
         let windowScreen = UIApplication.shared.connectedScenes.first as? UIWindowScene
@@ -18,7 +18,7 @@ public struct RouterTools {
         }
     }
     
-    public static func currentController() -> UIViewController {
+    static func currentController() -> UIViewController {
         if let current = getKeyWindow()?.rootViewController {
             return getCurrent(controller: current)
         }else {
@@ -27,12 +27,12 @@ public struct RouterTools {
     }
     
     /// 当前的导航控制器
-    public static func currentNavigationController() -> UINavigationController? {
+    static func currentNavigationController() -> UINavigationController? {
         return currentController().navigationController
     }
     
     /// 获取可用的导航控制器
-    public static func getNavigationController(navRootVC: UIViewController? = nil) -> UINavigationController? {
+    static func getNavigationController(navRootVC: UIViewController? = nil) -> UINavigationController? {
         if let rootVC = navRootVC as? UINavigationController {
             return rootVC
         } else if let rootVC = navRootVC?.navigationController {
@@ -42,7 +42,7 @@ public struct RouterTools {
         }
     }
     
-    public static func getCurrent(controller: UIViewController) -> UIViewController {
+    static func getCurrent(controller: UIViewController) -> UIViewController {
         if controller is UINavigationController {
             let naviController = controller as! UINavigationController
             return getCurrent(controller: naviController.viewControllers.last!)

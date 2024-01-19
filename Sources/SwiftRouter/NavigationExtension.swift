@@ -17,13 +17,13 @@ extension Router {
     ///   - fromController: 从哪个控制器跳转过来，为nil时，获取App顶层控制器的导航栏
     ///   - params: 初始化控制器所需参数
     ///   - animation: 跳转是否需要动画
-    public func push(_ controllerName: String,
+    public static func push(_ controllerName: String,
                      moduleName: String? = nil,
                      from fromController: UIViewController? = nil,
                      params: [String : Any]? = nil,
                      animation: Bool = true) {
         
-        guard let controller = createController(controllerName, moduleName: moduleName, params: params) else { return }
+        guard let controller = Router.createController(controllerName, moduleName: moduleName, params: params) else { return }
         pushController(controller, from: fromController, animation: animation)
     }
     
@@ -32,14 +32,14 @@ extension Router {
     ///   - controller: 需要跳转的控制器
     ///   - fromController: 从哪个控制器跳转
     ///   - animation: 跳转是否需要动画
-    public func push(_ controller: UIViewController?,
+    public static func push(_ controller: UIViewController?,
                      from fromController: UIViewController? = nil,
                      animation: Bool = true) {
         guard let controller else { return }
         pushController(controller, from: fromController, animation: animation)
     }
     
-    private func pushController(_ controller: UIViewController,
+    private static func pushController(_ controller: UIViewController,
                                 from fromController: UIViewController? = nil,
                                 animation: Bool = true) {
         controller.hidesBottomBarWhenPushed = true

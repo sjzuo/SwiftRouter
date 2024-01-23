@@ -13,10 +13,10 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
-### JZSwiftRouter
+### IKMTJBHomeModule
 
 ```sh
-[bundle exec] fastlane JZSwiftRouter
+[bundle exec] fastlane IKMTJBHomeModule
 ```
 
 

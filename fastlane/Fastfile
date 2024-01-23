@@ -13,7 +13,7 @@ lane :JZSwiftRouter do |options|
   version_bump_podspec(path: spec_path, version_number: target_version)
   # 提交代码到远程仓库
   git_add(path: '.')
-  git_commit(path: '.', message: 'release')
+  git_commit(path: '.', message: 'fix(*):组件打包新版本')
   push_to_git_remote
   # 检查对于 tag 是否已经存在
   if git_tag_exists(tag: target_version)

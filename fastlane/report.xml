@@ -5,34 +5,59 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000418">
+      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.000383">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: git_pull" time="1.147085">
+      <testcase classname="fastlane.lanes" name="01: git_pull" time="0.912769">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: ensure_git_branch" time="0.023453">
+      <testcase classname="fastlane.lanes" name="02: ensure_git_branch" time="0.022493">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: version_bump_podspec" time="0.002597">
+      <testcase classname="fastlane.lanes" name="03: version_bump_podspec" time="0.001705">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: git_add" time="0.037206">
+      <testcase classname="fastlane.lanes" name="04: git_add" time="0.028408">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: git_commit" time="0.032786">
+      <testcase classname="fastlane.lanes" name="05: git_commit" time="0.046188">
         
-          <failure message="/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/actions/actions_helper.rb:67:in `execute_action&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/runner.rb:255:in `block in execute_action&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/runner.rb:229:in `chdir&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/runner.rb:229:in `execute_action&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/runner.rb:157:in `trigger_action_by_name&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/fast_file.rb:159:in `method_missing&apos;&#10;Fastfile:34:in `block (2 levels) in parsing_binding&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/lane.rb:41:in `call&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/runner.rb:45:in `chdir&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/runner.rb:45:in `execute&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/lane_manager.rb:47:in `cruise_lane&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/commands_generator.rb:110:in `block (2 levels) in run&apos;&#10;/Users/sjz/.rvm/rubies/ruby-3.0.0/lib/ruby/gems/3.0.0/gems/commander-4.6.0/lib/commander/command.rb:187:in `call&apos;&#10;/Users/sjz/.rvm/rubies/ruby-3.0.0/lib/ruby/gems/3.0.0/gems/commander-4.6.0/lib/commander/command.rb:157:in `run&apos;&#10;/Users/sjz/.rvm/rubies/ruby-3.0.0/lib/ruby/gems/3.0.0/gems/commander-4.6.0/lib/commander/runner.rb:444:in `run_active_command&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:124:in `run!&apos;&#10;/Users/sjz/.rvm/rubies/ruby-3.0.0/lib/ruby/gems/3.0.0/gems/commander-4.6.0/lib/commander/delegates.rb:18:in `run!&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/commands_generator.rb:354:in `run&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/commands_generator.rb:43:in `start&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/cli_tools_distributor.rb:123:in `take_off&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/bin/fastlane:23:in `&lt;top (required)&gt;&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/bin/fastlane:23:in `load&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/bin/fastlane:23:in `&lt;main&gt;&apos;&#10;&#10;Exit status of command &apos;git commit -m &apos;&apos; .&apos; was 1 instead of 0.&#10;Aborting commit due to empty commit message.&#10;" />
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: push_to_git_remote" time="1.022407">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: git_tag_exists" time="0.023441">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: add_git_tag" time="0.031377">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: push_git_tags" time="0.881722">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: pod_lib_lint" time="0.617694">
+        
+          <failure message="/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/actions/actions_helper.rb:67:in `execute_action&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/runner.rb:255:in `block in execute_action&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/runner.rb:229:in `chdir&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/runner.rb:229:in `execute_action&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/runner.rb:157:in `trigger_action_by_name&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/fast_file.rb:159:in `method_missing&apos;&#10;Fastfile:46:in `block (2 levels) in parsing_binding&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/lane.rb:41:in `call&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/runner.rb:45:in `chdir&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/runner.rb:45:in `execute&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/lane_manager.rb:47:in `cruise_lane&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/commands_generator.rb:110:in `block (2 levels) in run&apos;&#10;/Users/sjz/.rvm/rubies/ruby-3.0.0/lib/ruby/gems/3.0.0/gems/commander-4.6.0/lib/commander/command.rb:187:in `call&apos;&#10;/Users/sjz/.rvm/rubies/ruby-3.0.0/lib/ruby/gems/3.0.0/gems/commander-4.6.0/lib/commander/command.rb:157:in `run&apos;&#10;/Users/sjz/.rvm/rubies/ruby-3.0.0/lib/ruby/gems/3.0.0/gems/commander-4.6.0/lib/commander/runner.rb:444:in `run_active_command&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:124:in `run!&apos;&#10;/Users/sjz/.rvm/rubies/ruby-3.0.0/lib/ruby/gems/3.0.0/gems/commander-4.6.0/lib/commander/delegates.rb:18:in `run!&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/commands_generator.rb:354:in `run&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/commands_generator.rb:43:in `start&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/fastlane/lib/fastlane/cli_tools_distributor.rb:123:in `take_off&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/gems/fastlane-2.217.0/bin/fastlane:23:in `&lt;top (required)&gt;&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/bin/fastlane:23:in `load&apos;&#10;/Users/sjz/.rvm/gems/ruby-3.0.0/bin/fastlane:23:in `&lt;main&gt;&apos;&#10;&#10;Exit status of command &apos;bundle exec pod lib lint --verbose --allow-warnings --sources=&apos;https://gitee.com/sjzLovecj/JZSpecs.git&apos; --use-modular-headers&apos; was 1 instead of 0.&#10;/Users/sjz/.rvm/rubies/ruby-3.0.0/lib/ruby/site_ruby/3.0.0/bundler/rubygems_integration.rb:308:in `block in replace_bin_path&apos;: can&apos;t find executable pod for gem cocoapods. cocoapods is not currently included in the bundle, perhaps you meant to add it to your Gemfile? (Gem::Exception)&#10;	from /Users/sjz/.rvm/rubies/ruby-3.0.0/lib/ruby/site_ruby/3.0.0/bundler/rubygems_integration.rb:336:in `block in replace_bin_path&apos;&#10;	from /Users/sjz/.rvm/rubies/ruby-3.0.0/bin/pod:25:in `&lt;main&gt;&apos;&#10;	from /Users/sjz/.rvm/rubies/ruby-3.0.0/bin/ruby_executable_hooks:22:in `eval&apos;&#10;	from /Users/sjz/.rvm/rubies/ruby-3.0.0/bin/ruby_executable_hooks:22:in `&lt;main&gt;&apos;&#10;" />
         
       </testcase>
     

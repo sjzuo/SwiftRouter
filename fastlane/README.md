@@ -13,10 +13,12 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
-### release_pod
+## iOS
+
+### ios JZSwiftRouter
 
 ```sh
-[bundle exec] fastlane release_pod
+[bundle exec] fastlane ios JZSwiftRouter
 ```
 
 

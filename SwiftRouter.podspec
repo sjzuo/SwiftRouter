@@ -1,6 +1,6 @@
 
 Pod::Spec.new do |s|
-  s.name             = 'JZSwiftRouter'
+  s.name             = 'SwiftRouter'
   s.version          = '0.0.1'
   s.summary          = '路由.'
  

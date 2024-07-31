@@ -16,7 +16,7 @@ Swift 路由和模块通信解耦工具
 
 在 Xcode 的菜单栏中选择 `File > Swift Packages > Add Pacakage Dependency`，然后在搜索栏输入
 
-`https://github.com/sjzuo/JZSwiftRouter`，即可完成集成
+`https://github.com/sjzuo/SwiftRouter`，即可完成集成
 
 
 ## 使用

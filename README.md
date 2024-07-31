@@ -12,19 +12,11 @@ Swift 路由和模块通信解耦工具
 
 ## 安装
 
-### cocoapods
-
-1. 在Podfile中添加 `pod 'SJZSwiftRouter'`
-
-2. 执行 `pod install` 或 `pod update`
-
-3. 导入 `import SJZSwiftRouter`
-
 ### Swift Package Manager
 
 在 Xcode 的菜单栏中选择 `File > Swift Packages > Add Pacakage Dependency`，然后在搜索栏输入
 
-`https://github.com/jackiehu/SwiftMediator`，即可完成集成
+`https://github.com/sjzuo/JZSwiftRouter`，即可完成集成
 
 
 ## 使用
